@@ -1,34 +1,159 @@
 // bower:scss
 // endbower
 
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+html, body, #carousel, #carousel ul, #carousel li {
+    // min-height: 420px;
+    // height: 100%;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    font-family: "proxima-nova", sans-serif;
 }
 
-.container {
-    min-width: 100%;
-    min-height: 100%;
+$green: #00CC00;
 
-    .slide {
-        top: 20px;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        position: absolute;
-        padding: 20px;
+#carousel {
+    // overflow: hidden;
+    width: 100%;
+    border: 10px solid white;
+    box-sizing: border-box;
 
-        background-color: #50C63D;
-        color: white;
-        display: flex;
+    ul {
+        position: relative;
+    }
+    li {
+        // float: left;
+        // overflow: hidden;
+        // -webkit-transform-style: preserve-3d;
+        // -webkit-transform: translate3d(0,0,0);
+        border-bottom: 10px solid #fff;
+        list-style: none;
+        overflow: hidden;
 
-        .content {
-            text-align: center;
+
+        background: $green;
+        &:nth-child(even) {
+            // background: darken($green, 2);
         }
+        &.light {
+            background: #f2f2f2;
+            .content {
+                color: #333333;
+                a {
+                    color: $green;
+                    text-decoration: none;
+                    text-transform: lowercase;
+                    font-weight: normal;
+                }
+            }
+        }
+        &.dark {
+            background: #1e1e1e;
+            .content {
+                color: #ffffff;
+                a {
+                    color: $green;
+                    text-decoration: none;
+                    text-transform: lowercase;
+                    font-weight: normal;
+                }
+            }
+        }
+        &.starbucks {
+            background: url(../images/starbucks-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            h3 {
+                color: rgba(255,255,255, 0.7) !important;
+            }
+        }
+        &.square {
+            background: url(../images/square-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            h3 {
+                color: rgba(255,255,255, 0.7) !important;
+            }
+        }
+        &.tinder {
+            background: url(../images/tinder-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            h3 {
+                color: rgba(255,255,255, 0.7) !important;
+            }
+        }
+        &.amazon {
+            background: url(../images/amazon-bg.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            h3 {
+                color: rgba(255,255,255, 0.7) !important;
+            }
+        }
+        .content {
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            padding: 16px;
+            margin: 60px auto;
+            text-align: center;
+            color: #fff;
+            min-width: 100%;
+            box-sizing: border-box;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            .col {
+                width: 49%;
+                display: inline-block;
+                padding: 10px;
+                box-sizing: border-box;
+                // margin: 5px;
+                &:first-of-type {
+                    border-right: 1px solid rgba(255,255,255,0.3);
+                }
+                h4 {
+                    letter-spacing: 0px !important;
+                }
+            }
+            img {
+                margin: 15px -16px;
+                width: 110%;
+                // -webkit-transform:translate(-6%, 12%) scale(1.35);
+                // -moz-transform:translate(-6%, 12%) scale(1.35);
+                // -ms-transform:translate(-6%, 12%) scale(1.35);
+                // -o-transform:translate(-6%, 12%) scale(1.35);
+                // transform:translate(-6%, 12%) scale(1.35);
+            }
+            a {
+                color: darken($green, 20);
+                text-decoration: none;
+                text-transform: lowercase;
+                font-weight: normal;
+                letter-spacing: 0px;
+            }
+            h1, h2, h3 {
+                font-weight: bold;
+            }
+            h1 {
+                font-size: 38px;
+            }
+            h2 {
 
-        h1 {
-
+            }
+            h3 {
+                color: darken($green, 20);
+                font-size: 16px;
+                padding-bottom: 16px;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
+            }
+            .lower {
+                    font-weight: normal;
+                    text-transform: initial;
+                }
         }
     }
 }
